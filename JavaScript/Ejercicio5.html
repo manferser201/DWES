@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <h3>INTRODUZCA EL PRECIO (EN FORMA DECIMAL) Y LA CANTIDAD QUE SE QUIERE LLEVAR</h3>
+
+    <label for="precio">Precio</label>
+    <input type="text" id="precio" name="precio">
+
+    <label for="cantidad">Cantidad</label>
+    <input type="text" id="cantidad" name="cantidad">
+    <input type="submit" id="boton">
+
+    <script type="text/javascript">
+        
+        let boton = document.getElementById("boton");
+
+        boton.addEventListener("click", () => {
+            const precio = parseFloat(document.getElementById("precio").value);
+            const cantidad = parseInt(document.getElementById("cantidad").value);
+
+            document.write("Deberá abonar " + parseFloat(precio * cantidad) + "€");
+            
+        });
+        
+    </script>
+</body>
+</html>

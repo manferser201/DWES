@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <h3>INTRODUZCA 4 NÚMEROS DECIMALES</h3>
+
+    <input type="text" id="num1" name="num1">
+    <input type="text" id="num2" name="num2">
+    <input type="text" id="num3" name="num3">
+    <input type="text" id="num4" name="num4">
+    <input type="submit" id="boton">
+
+    <script type="text/javascript">
+        let boton = document.getElementById("boton");
+
+        boton.addEventListener("click", () => {
+            const n1 = parseFloat(document.getElementById("num1").value);
+            const n2 = parseFloat(document.getElementById("num2").value);
+            const n3 = parseFloat(document.getElementById("num3").value);
+            const n4 = parseFloat(document.getElementById("num4").value);
+
+            document.write("La suma de los números es: " + (n1 + n2 + n3 + n4));
+            document.write("El producto de los números es: " + (n1 * n2 * n3 * n4));
+            document.write("El resto de los dos primeros números es: " + (n1 - n2));
+            document.write("El cociente de los dos últimos números es: " + (n3 / n4));
+        });
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <h3>INTRODUZCA 4 NÚMEROS ENTEROS</h3>
+    
+    <input type="text" id="num1" name="num1">
+    <input type="text" id="num2" name="num2">
+    <input type="text" id="num3" name="num3">
+    <input type="text" id="num4" name="num4">
+    <input type="submit" id="boton">
+
+    <script type="text/javascript">
+        let boton = document.getElementById("boton");
+
+        boton.addEventListener("click", () => {
+            const n1 = document.getElementById("num1").value;
+            const n2 = document.getElementById("num2").value;
+            const n3 = document.getElementById("num3").value;
+            const n4 = document.getElementById("num4").value;
+
+            document.write("La suma de " + n1 + " y " + n2 + " es: " + (parseInt(n1) + parseInt(n2)));
+            document.write("El producto de " + n3 + " y " + n4 + " es: " + parseInt(n3) * parseInt(n4));
+        });
+        
+    </script>
+</body>
+</html>
