@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13</title>
+</head>
+<body>
+    <script>
+        let texto = "ejemplo";
+
+        for (const x in texto) {
+            if (Object.hasOwnProperty.call(texto, x)) {
+                const element = texto[x];
+                
+            }
+        }
+
+        /*A la hora de compilar dicho bucle, nos dará un error. Esto se debe a que la 
+        variable "texto" es de tipo cadena y el bucle for...in se utiliza para 
+        elementos de tipo objeto.*/
+    </script>
+</body>
+</html>

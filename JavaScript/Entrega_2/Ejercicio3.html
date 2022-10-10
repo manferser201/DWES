@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    
+    <h3>SELECCIONE UNA OPCIÓN</h3>
+
+    <input type="radio" id="opcion1" name="opcion1" onclick="avisoSeleccion()"> Opción 1
+    <input type="radio" id="opcion2" name="opcion1" onclick="avisoSeleccion()"> Opción 2
+    <input type="radio" id="opcion3" name="opcion1" onclick="avisoSeleccion()"> Opción 3
+
+    <script>
+        function avisoSeleccion(){
+            let o1 = document.getElementById("opcion1");
+            let o2 = document.getElementById("opcion2");
+            let o3 = document.getElementById("opcion3");
+
+            if(o1.checked){
+                alert("Ha elegido la opción 1");
+            } else if (o2.checked){
+                alert("Ha elegido la opción 2");
+            }else if (o3.checked){
+                alert("Ha elegido la opción 3");
+            }
+        }
+    </script>
+</body>
+</html>

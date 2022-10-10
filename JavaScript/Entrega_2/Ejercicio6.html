@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+    <h3>INTRODUZCA 3 NÚMEROS</h3>
+
+    <label for="num1">Primer número</label>
+    <input type="text" id="num1" name="num1"><br>
+
+    <label for="num2">Segundo número</label>
+    <input type="text" id="num2" name="num2"><br>
+
+    <label for="num3">Tercer número</label>
+    <input type="text" id="num3" name="num3"><br>
+
+    <button onclick="numeroMayor()">Enviar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function numeroMayor(){
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            let num3 = parseFloat(document.getElementById("num3").value);
+
+            let mayor = (num1 > num2 && num1 > num3) ?  `El mayor es: ${num1}` :
+                        (num2 > num1 && num2 > num3) ? `El mayor es: ${num2}` :
+                        (num3 > num1 && num2 < num3) ? `El mayor es: ${num3}` :
+                        ((num1 == num2 && num1 == num3) || (num2 == num1 && num2 == num3)) ? `Como los tres números son iguales, el mayor es ${num1}`   :
+                        (num3 == num2 && num3 > num1) ? `El mayor es: ${num3}` :
+                        (num3 == num1 && num3 > num2) ? `El mayor es: ${num3}` :
+                        "Los números están mal introducidos";
+            
+            document.getElementById("resultado").innerHTML = mayor;
+            
+        }
+    </script>
+</body>
+</html>

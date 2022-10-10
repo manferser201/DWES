@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 11</title>
+</head>
+<body>
+    <h3>INTRODUZCA UNA FECHA</h3>
+
+    <label for="dia">Dia</label>
+    <input type="text" id="dia" name="dia">
+
+    <label for="mes">Mes</label>
+    <input type="text" id="mes" name="mes">
+
+    <label for="anio">Año</label>
+    <input type="text" id="anio" name="anio">
+
+    <button onclick="esNavidad()">Enviar Fecha</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function esNavidad(){
+            let dia = parseInt(document.getElementById("dia").value);
+            let mes = parseInt(document.getElementById("mes").value);
+            let anio = parseInt(document.getElementById("anio").value);
+            
+            const mensaje = ((dia < 0 || dia > 31) || (mes < 0 || mes > 12)) ? alert("Los datos introducidos no son correctos") :
+                            (dia == 25 && mes == 12) ? "¡FELIZ NAVIDAAAADDDD!" :
+                            "LO SIENTO, NO ESTAMOS AÚN EN NAVIDAD";
+
+            document.getElementById("resultado").innerHTML = mensaje;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 24</title>
+</head>
+<body>
+    <h3>JUEGO DE DADOS</h3>
+
+    <h5>EL JUEGO NO TERMINARÁ HASTA QUE LO PIERDAS TODO O LLEGUES A UN SALDO IGUAL O SUPERIOR A 200€</h5>
+    <h5>LO ÚNICO QUE TIENES QUE HACER ES SELECCIONAR UN NÚMERO Y QUE ESTE COINCIDA CON EL QUE SALGA EN EL DADO Y GANARÁS EL DOBLE DE LO APOSTADO, PERO CUIDADO CON FALLAR QUE PERDERAS LO APOSTADO. </h5>
+    <h5>COMO SOMOS BUENA GENTE TE DAREMOS UN SALDO INICIAL DE 50€. MUCHA SUERTE...</h5>
+
+    <label for="apuesta">Apuesta:</label>
+    <input type="text" name="apuesta" id="apuesta"><br>
+
+    <label for="num">Número: </label>
+    <input type="text" name="num" id="num"><br>
+
+    <button onclick="lanzarDado()">Jugar</button>
+
+    <p id="juego"></p>
+
+    <script>
+        function lanzarDado(){
+            let apuesta = parseFloat(document.getElementById("apuesta").value);
+            let num = parseInt(document.getElementById("num").value);
+
+            let saldo = 50;
+            
+            while (saldo > 0 && saldo< 200){
+                let numDado = Math.random() * 6 + 1;
+                
+
+                if (num == numDado){
+                    alert(`ENHORABUENA!! EL NÚMERO DEL DADO COINCIDE. HAS OBTENIDO ${apuesta * 2}€`);
+                    
+                } else {
+
+                }
+            }
+
+        }
+    </script>
+
+</body>
+</html>

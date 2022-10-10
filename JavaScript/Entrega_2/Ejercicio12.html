@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 12</title>
+</head>
+<body>
+    <h3>INTRODUZCA UN NÚMERO</h3>
+
+    <input type="text" id="num">
+
+    <button onclick="esPar()">Enviar Fecha</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function esPar(){
+            let num = parseInt(document.getElementById("num").value);
+            
+            const mensaje = (num % 2 == 0) ? "EL NÚMERO ES PAR" :
+                            "EL NÚMERO ES IMPAR";
+
+            document.getElementById("resultado").innerHTML = mensaje;
+        }
+    </script>
+</body>
+</html>

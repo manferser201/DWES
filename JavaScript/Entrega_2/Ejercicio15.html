@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 15</title>
+</head>
+<body>
+    <h3>INTRODUZCA UN DÍA DE LA SEMANA</h3>
+
+    <input type="text" id="dia" placeholder="Lunes">
+
+    <button onclick="diaSiguiente()">Enviar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function diaSiguiente(){
+            let dia = document.getElementById("dia").value;
+
+           switch (dia.toUpperCase()){
+            case "LUNES": document.getElementById("resultado").innerHTML = "MARTES"; break;
+            case "MARTES": document.getElementById("resultado").innerHTML = "MIERCOLES"; break;
+            case "MIERCOLES": document.getElementById("resultado").innerHTML = "JUEVES"; break;
+            case "JUEVES": document.getElementById("resultado").innerHTML = "VIERNES"; break;
+            case "VIERNES": document.getElementById("resultado").innerHTML = "SABADO"; break;
+            case "SABADO": document.getElementById("resultado").innerHTML = "DOMINGO"; break;
+            case "DOMINGO": document.getElementById("resultado").innerHTML = "LUNES"; break;
+            default: alert("EL DÍA DE LA SEMANA INTRODUCIDO NO ES CORRECTO");
+
+           }
+        }
+    </script>
+</body>
+</html>

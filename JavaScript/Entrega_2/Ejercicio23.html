@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 23</title>
+</head>
+<body>
+    <h3>INTRODUZCA LA BASE IMPONIBLE (BI), EL IVA Y EL PESO DEL PRODUCTO</h3>
+
+    <label for="bi">BI:</label>
+    <input type="text" name="bi" id="bi"><br>
+
+    <label for="iva">IVA:</label>
+    <input type="text" name="iva" id="iva" placeholder="normal/reducido"><br>
+
+    <label for="peso">Peso:</label>
+    <input type="text" name="peso" id="peso"><br>
+
+    <button onclick="calcularPrecio()">Enviar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function calcularPrecio(){
+            let bi = parseFloat(document.getElementById("bi").value);
+            const iva = document.getElementById("iva").value;
+            let peso = parseFloat(document.getElementById("peso").value);
+
+            let porcentajeIva = (iva.toUpperCase() == "NORMAL") ? 0.21 :
+                                (iva.toUpperCase() == "REDUCIDO") ? 0.1 : 
+                                alert("EL IVA ESTÁ MAL INTRODUCIDO");
+
+            let gastosEnvios = (peso > 0 && peso < 1) ? 3 :
+                                (peso >= 1 && peso < 3) ? 5 : 
+                                (peso >= 3) ? 10 :
+                                alert("NO PUEDE INTRODUCIR UN PESO MENOR QUE 0")
+
+            let precio = bi + (bi * porcentajeIva) + gastosEnvios;
+            
+            document.getElementById("resultado").innerHTML = `El precio que tiene que pagar por ese producto es de ${precio}€.`;
+        }
+    </script>
+</body>
+</html>

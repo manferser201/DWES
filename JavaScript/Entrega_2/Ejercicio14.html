@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 14</title>
+</head>
+<body>
+    
+    <button onclick="multiplosCinco()">Pulsa para iniciar</button>
+    <p id="resultado"></p>
+    <p id="numPrimos"></p>
+
+    <script>        
+        function multiplosCinco(){
+            let numPrimos = 0;
+            let aux = " ";
+
+            for (let index = 1; index < 201; index++){
+                if(index % 5 == 0){
+                    aux += " " + index;
+                    document.getElementById("resultado").innerHTML = aux;
+                }
+
+                if(esPrimo(index)){
+                    numPrimos++;
+                }
+               
+            }
+
+            document.getElementById("numPrimos").innerHTML = `Entre 1 y 200 hay ${numPrimos} números primos`;
+        }
+
+        function esPrimo(num){
+            for (let index = 2; index < num/2; index++){
+                if(num % index == 0){
+                    return false;
+                }  
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 28</title>
+</head>
+<body>
+    <h3>INTRODUCE TU FECHA DE NACIMIENTO EN NÚMEROS</h3>
+    
+    <label for="dia">Dia:</label>
+    <input type="text" id="dia" name="dia"><br>
+
+    <label for="mes">Mes: </label>
+    <input type="text" id="mes" name="mes" placeholder="1 = Enero, 2 = Febrero..."><br>
+
+    <label for="anio">Año: </label>
+    <input type="text" id="anio" name="anio">
+
+    <button onclick="signoZodiaco()"> Enviar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function signoZodiaco(){
+            let dia = parseInt(document.getElementById("dia").value);
+            let mes = parseInt(document.getElementById("mes").value);
+
+            let horoscopo = ((dia >= 21 && mes == 12) || (dia <= 19 && mes == 1)) ? "Tu signo es CAPRICORNIO" :
+                            ((dia >= 20 && mes == 1) || (dia <= 18 && mes == 2)) ? "Tu signo es ACUARIO" :
+                            ((dia >= 19 && mes == 2) || (dia <= 20 && mes == 3)) ? "Tu signo es PISCIS" :
+                            ((dia >= 21 && mes == 3) || (dia <= 20 && mes == 4)) ? "Tu signo es ARIES" :
+                            ((dia >= 21 && mes == 4) || (dia <= 20 && mes == 5)) ? "Tu signo es TAURO" :
+                            ((dia >= 21 && mes == 5) || (dia <= 20 && mes == 6)) ? "Tu signo es GÉMINIS" :
+                            ((dia >= 21 && mes == 6) || (dia <= 20 && mes == 7)) ? "Tu signo es CANCER" :
+                            ((dia >= 21 && mes == 7) || (dia <= 21 && mes == 8)) ? "Tu signo es LEO" :
+                            ((dia >= 22 && mes == 8) || (dia <= 22 && mes == 9)) ? "Tu signo es VIRGO" :
+                            ((dia >= 23 && mes == 9) || (dia <= 22 && mes == 10)) ? "Tu signo es LIBRA" :
+                            ((dia >= 23 && mes == 10) || (dia <= 22 && mes == 11)) ? "Tu signo es CAPRICORNIO" :
+                            ((dia >= 23 && mes == 11) || (dia <= 20 && mes == 12)) ? "Tu signo es CAPRICORNIO" :
+                            "LOS DATOS INTRODUCIDOS ESTÁN MAL. POR FAVOR INTRODUZCALOS EN EL FORMATO ADECUADO";
+            
+            document.getElementById("resultado").innerHTML = horoscopo;
+        }
+    </script>
+</body>
+</html>

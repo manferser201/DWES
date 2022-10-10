@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+    <h3>INTRODUZCA UN NÚMERO</h3>
+
+    <input type="text" id="num"><br>
+
+    <button onclick="signoNumerico()">Enviar</button><br>
+
+    <p id="resultado"></p>
+
+    <script>
+        function signoNumerico(){
+            let num = parseInt(document.getElementById("num").value);
+
+            let signo = (num < 0) ? "El número es NEGATIVO" :
+                        (num == 0) ? "El número es CERO" :
+                        "El número es POSITIVO";
+
+            document.getElementById("resultado").innerHTML = signo;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <h3>INTRODUCE UN NOMBRE</h3>
+
+    <input type="text" id="nombre" placeholder="Insertar nombre...">
+    <button onclick="insertarNombre()">Insertar</button>
+
+    <ul id="lista">
+        
+    </ul>
+
+    <script>
+            function insertarNombre(){
+
+                let Nombre = document.getElementById("nombre").value;
+
+                if(Nombre == ""){
+                    alert("ESCRIBE UN NOMBRE PARA PODER INTRODUCIRLO");
+                } else{
+                    let listaNombres = document.getElementById("lista");
+
+                    listaNombres.innerHTML += `<li>${Nombre}</li>`;
+                }
+            }
+        
+    </script>
+</body>
+</html>

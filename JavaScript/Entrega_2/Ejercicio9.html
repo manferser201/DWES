@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+</head>
+<body>
+    <h3>INTRODUZCA UN NÚMERO DE 1 o 2 CIFRAS</h3>
+
+    <input type="text" id="num">
+
+    <button onclick="longitudNumero()">Enviar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function longitudNumero(){
+            let num = parseInt(document.getElementById("num").value);
+
+            let longitud = (num >= 0 && num < 10) ? "El número es de 1 cifra" :
+                            (num >= 10 && num < 100) ? "El número es de 2 cifras" :
+                            alert("EL NÚMERO INTRODUCIDO NO CUMPLE LOS REQUISITOS");
+            
+            document.getElementById("resultado").innerHTML = longitud;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 18</title>
+</head>
+<body>
+    <h3>INTRODUZCA LOS DATOS DEL OPERARIO</h3>
+    
+    <label for="sueldo">Sueldo: </label>
+    <input type="text" id="sueldo" name="sueldo"><br>
+
+
+    <label for="antiguedad">Antigüedad: </label>
+    <input type="text" id="antiguedad" name="antiguedad"><br>
+
+    <button onclick="aumentoSueldo()">Enviar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function aumentoSueldo(){
+            let sueldo = parseInt(document.getElementById("sueldo").value);
+            let antiguedad = parseInt(document.getElementById("antiguedad").value);
+
+            let mensaje = (sueldo < 1000 && antiguedad == 5) ? "El sueldo nuevo de este operario será de " + (sueldo + sueldo * 0.05) + "€" :
+                            (sueldo < 1000 && antiguedad == 10) ? "El sueldo nuevo de este operario será de " + (sueldo + sueldo * 0.2) + "€":            
+                            (sueldo > 1000) ? `A este usuario no se le modifica el salario por lo que se quedaría con su salario antigüo de ${sueldo}€` :
+                            "El usuario no entra dentro de los requisitos para una posible modificacion del salario";
+
+            document.getElementById("resultado").innerHTML = mensaje
+        }
+    </script>
+</body>
+</html>

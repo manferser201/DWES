@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+<body>
+    <h3>INTRODUZCA EL NOMBRE Y LA EDAD</h3>
+
+    <label for="nombre">NOMBRE</label>
+    <input type="text" id="nombre" name="edad">
+
+    <label for="edad">EDAD</label>
+    <input type="text" id="edad" name="edad">
+
+    <button onclick="saberEdad()">Enviar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function saberEdad(){
+            const nombre = document.getElementById("nombre").value;
+            const edad = document.getElementById("edad").value;
+
+            let dias = 365 * edad;
+            
+            let mayorEdad = (edad <= 0) ? alert("INTRODUZCA UNA EDAD CORRECTA") :
+                            (edad > 0 && edad < 18) ? ("ES MENOR DE EDAD") :
+                            "ES MAYOR DE EDAD";
+
+                document.getElementById("resultado").innerHTML = `Holaaaaa ${nombre}, usted ha vivido ${dias} días y ${mayorEdad}`;
+        }
+    </script>
+</body>
+</html>

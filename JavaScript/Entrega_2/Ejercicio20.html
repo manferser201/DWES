@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 20</title>
+</head>
+<body>
+    <h3>INTRODUZCA LA MARCA Y EL MODELO DEL COCHE</h3>
+
+    <label for="marca">Marca: </label>
+    <input type="text" id="marca" name="marca"><br>
+
+
+    <label for="modelo">Modelo: </label>
+    <input type="text" id="modelo" name="modelo"><br>
+
+    <button onclick="obtenerDescuento()">Enviar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function obtenerDescuento(){
+            const marca = document.getElementById("marca").value;
+            const modelo = document.getElementById("modelo").value;
+
+           switch (marca.toUpperCase()){
+            case "RENAULT": document.getElementById("resultado").innerHTML = "Su coche tiene un 15% de descuento"; break;
+            case "FORD": 
+                switch(modelo.toUpperCase()){
+                    case "FIESTA": document.getElementById("resultado").innerHTML = "Su coche tiene un 7% de descuento"; break;
+                    case "FOCUS": document.getElementById("resultado").innerHTML = "Su coche tiene un 10% de descuento"; break;
+                    default: document.getElementById("resultado").innerHTML = "Su coche tiene un 5% de descuento";
+                }; break;
+            default: document.getElementById("resultado").innerHTML = "Su coche tiene un 5% de descuento";
+
+           }
+        }
+    </script>
+</body>
+</html>

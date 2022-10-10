@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <h3>INTRODUZCA 2 NÚMEROS</h3>
+
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+
+    <input type="submit" id="boton">
+    <p id="texto"></p>
+
+    <script>
+        let boton = document.getElementById("boton");
+
+        boton.addEventListener("click", () => {
+
+            let n1 = parseInt(document.getElementById("num1").value);
+            let n2 = parseInt(document.getElementById("num2").value);
+
+            if(n1 > n2){
+                const suma = "La suma es: " + (n1 + n2);
+                const resta = "La diferencia es: " + (n1 - n2);
+
+                document.getElementById("texto").innerHTML = suma + "\n" + resta;
+
+            } else if(n2 > n1){
+                const multiplicacion = "El producto es: " + (n1 * n2);
+                const division = "El cociente es: " + (n2 / n1);
+
+                document.getElementById("texto").innerHTML = multiplicacion + "\n" + division;
+
+            } else {
+                alert("LOS DOS NÚMEROS NO PUEDEN SER IGUALES");
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 22</title>
+</head>
+<body>
+    <h3>INTRODUZCA SU EDAD, ALTURA Y SEXO</h3>
+
+    <label for="edad">Edad:</label>
+    <input type="text" name="edad" id="edad"><br>
+
+    <label for="altura">Altura:</label>
+    <input type="text" name="altura" id="altura"><br>
+
+    <label for="sexo">Sexo:</label>
+    <input type="text" name="sexo" id="sexo"><br>
+
+    <button onclick="imcRecomendado()">Enviar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function imcRecomendado(){
+            let edad = parseInt(document.getElementById("edad").value);
+            let altura = parseInt(document.getElementById("altura").value);
+            const sexo = document.getElementById("sexo").value;
+            let imc;
+
+            if (sexo.toUpperCase() == "MUJER"){
+                imc = (50 + ((altura - 150) / 4) * 0.9 + (edad - 20) / 4);
+            } else if (sexo.toUpperCase() == "HOMBRE"){
+                imc = (50 + ((altura - 150) / 4) * 3 + (edad - 20) / 4);
+            } else {
+                alert("NO ES UN GÉNERO BINARIO");
+            }               
+
+            document.getElementById("resultado").innerHTML = `El IMC es ${imc}`;
+        }
+    </script>
+</body>
+</html>

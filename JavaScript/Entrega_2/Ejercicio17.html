@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 17</title>
+</head>
+<body>
+    <h3>INTRODUZCA LOS DATOS DEL ASPIRANTE</h3>
+    
+    <label for="nombre">Nombre: </label>
+    <input type="text" id="nombre" name="nombre"><br>
+
+
+    <label for="respuestas">Cantidad de preguntas respondidas: </label>
+    <input type="text" id="respuestas" name="respuestas"><br>
+
+    <label for="aciertos">Cantidad de preguntas acertadas: </label>
+    <input type="text" id="aciertos" name="aciertos"><br>
+
+    <button onclick="nivelAspirante()">Enviar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function nivelAspirante(){
+            let nombre = document.getElementById("nombre").value;
+            let respuestas = parseInt(document.getElementById("respuestas").value);
+            let aciertos = parseInt(document.getElementById("aciertos").value);
+
+            let porcentaje = (aciertos * 100) / respuestas;
+
+            let mensaje = (porcentaje >= 90) ? "Nivel superior" :
+                        (porcentaje < 90 && porcentaje >= 75) ? "Nivel medio" :
+                        (porcentaje < 75 && porcentaje >= 50) ? "Nivel bajo" :
+                        "Fuera de nivel";
+
+            document.getElementById("resultado").innerHTML = `${nombre} tiene un porcentaje de acierto del ${porcentaje}%, por lo que tiene un nivel: ${mensaje}`;
+        }
+    </script>
+</body>
+</html>
