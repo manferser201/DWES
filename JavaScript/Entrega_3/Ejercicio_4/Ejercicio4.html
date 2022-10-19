@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+    <link rel="stylesheet" href="Ejercicio4.css">
+    <script defer src="Ejercicio4.js"></script>
+    <script src="/3.Ejercicio_Formularios_Validaciones/Ejercicio_Cookies/localStorage.js"></script>
+    
+</head>
+<body>
+    <form id="Ej4">
+        <fieldset>
+            <legend>
+                <h2>Formulario 4</h2>
+            </legend>
+
+            <div class="columna">
+                <label for="fechaCreacion">Fecha de creación</label>
+                <input type="date" id="fechaCreacion"><br>
+
+                <label for="cocinero">Cocinero</label>
+                <input type="text" id="cocinero" placeholder="WW$1234"><br>
+
+                <label for="destinatario">Destinatario</label>
+                <input type="text" id="destinatario" placeholder="NM_alburquerque:1234"><br>
+
+                <label for="gramos">Gramos</label>
+                <input type="number" id="gramos"><br>
+
+                <label for="composicion">Composición</label>
+                <input type="text" id="composicion" placeholder="200gC3OH7"><br>
+
+                <label for="cuenta">Número de Cuenta</label>
+                <input type="text" id="cuenta"><br>
+
+                <div>
+                    <button type="submit" value="Enviar">Enviar</button>
+                </div>
+
+                <div>
+                    <button type="submit" value="recargar" onclick="recargarDatos()">Recargar</button>
+                </div>
+            
+            </div>
+        </fieldset>
+    </form>
+
+</body>
+</html>

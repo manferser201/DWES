@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <link rel="stylesheet" href="Ejercicio3.css">
+    <script defer src="Ejercicio3.js"></script>
+    <script src="/3.Ejercicio_Formularios_Validaciones/Ejercicio_Cookies/sessionStorage.js"></script>
+    
+</head>
+<body>
+    <form id="Ej3">
+        <fieldset>
+            <legend>
+                <h2>Formulario 3</h2>
+            </legend>
+
+            <div class="columna">
+                <label for="dni">DNI</label>
+                <input type="text" id="dni"><br>
+
+                <label for="nombreCompleto">Nombre Y Apellidos </label>
+                <input type="text" id="nombreCompleto" ><br>
+
+                <label for="fNacimiento">Fecha de nacimiento</label>
+                <input type="date" id="fNacimiento">
+
+                <label for="email">Email</label>
+                <input type="text" id="email"><br>
+
+                <label for="web">Web personal</label>
+                <input type="text" id="web" ><br>
+
+                <label for="contrasena">Contraseña</label>
+                <input type="password" id="contrasena">
+
+                <div>
+                    <button type="submit" value="Enviar">Enviar</button>
+                </div>
+                
+                <div>
+                    <button type="submit" value="recargar" onclick="recargarDatos()">Recargar</button>
+                </div>
+            
+            </div>
+        </fieldset>
+    </form>
+
+</body>
+</html>
